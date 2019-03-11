@@ -158,12 +158,12 @@ def load_subtitle_from_opensubtitle(root, file_path):
         if len(data) > 0:
             all_subtitle_ids = [each_subtitle.get('IDSubtitle') for each_subtitle in data]
             print('List of All Subtitles from Open Subtitles are {}'.format(all_subtitle_ids))
-            ost.download_subtitles(all_subtitle_ids,
-                                   override_filenames={'id_subtitle': 'output_filename.srt'},
-                                   output_directory=root)
+            downloaded = ost.download_subtitles(all_subtitle_ids,
+                                                override_filenames={'id_subtitle': 'output_filename.srt'},
+                                                output_directory=root)
+            print("Successful or Not Result is {}".format(downloaded))
     except:
         print("FORGET ABOUT THIS SUBTITLE !!!")
-
 
 
 def get_from_subscene(file_path, language):

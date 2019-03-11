@@ -165,6 +165,7 @@ def load_subtitle_from_opensubtitle(root, file_path):
         print("FORGET ABOUT THIS SUBTITLE !!!")
 
 
+
 def get_from_subscene(file_path, language):
     """Download subtitles from subscene."""
     try:
